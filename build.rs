@@ -21,6 +21,9 @@ fn main() {
     if let Ok(ref mut info) = pkg_config::find_library("ecore-evas") {
         paths.append(&mut info.include_paths);
     }
+    if let Ok(ref mut info) = pkg_config::find_library("eldbus") {
+        paths.append(&mut info.include_paths);
+    }
 
     build(&paths);
 }
