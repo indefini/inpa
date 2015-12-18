@@ -141,7 +141,6 @@ static const Eldbus_Service_Interface_Desc iface_desc = {
    "org.enlightenment.Test", NULL, test_signals
 };
 
-
 static Ecore_IMF_Context *
 im_module_create(void)
 {
@@ -163,6 +162,7 @@ im_module_create(void)
 
     ecore_imf_context_data_set(ctx, ctxd);
 
+    /*
     Eldbus_Connection *conn;
     Eldbus_Service_Interface *iface;
     eldbus_init();
@@ -174,7 +174,7 @@ im_module_create(void)
     emit_properties(iface);
     eldbus_connection_unref(conn);
     //eldbus_shutdown();
-
+    */
 
     return ctx;
 }
